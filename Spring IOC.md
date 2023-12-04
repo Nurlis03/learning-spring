@@ -20,3 +20,5 @@ In Annotation based configuration, you use annotations in the Java source code t
 Both way, Spring IoC container can be used to create, manage, and wire together objects in a Spring-based application, using a variety of different strategies, including constructor injection, setter injection, and interface injection.
 
 Overall, Spring IoC container provides a central location to manage the lifecycle and configuration of objects in an application, making it easier to develop, test, and maintain the code.
+
+Инверсия управления (Inversion of Control) - это такой архитектурный подход, когда сущность не сама создает свои зависимости, а когда этой сущности, зависимости поставляются извне
