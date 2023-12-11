@@ -1,5 +1,8 @@
 package com.example.springapp1;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class RockMusic implements Music {
 
     @Override
