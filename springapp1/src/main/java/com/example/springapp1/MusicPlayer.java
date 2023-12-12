@@ -1,39 +1,21 @@
 package com.example.springapp1;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import ch.qos.logback.core.rolling.helper.TokenConverter;
+
+@Component
 public class MusicPlayer {
-    private Music music;
+    private ClassicalMusic classicalMusic;
+    private RockMusic rockMusic;
 
-    private String name;
-    private int volume;
-
-    // Ioc
-    public MusicPlayer(Music music) {
-        this.music = music;
+    @Autowired
+    public MusicPlayer(ClassicalMusic classicalMusic, RockMusic rockMusic) {
+        this.classicalMusic = classicalMusic;
+        this.rockMusic = rockMusic;
     }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getVolume() {
-        return volume;
-    }
-
-    public void setVolume(int volume) {
-        this.volume = volume;
-    }
-
-    public MusicPlayer() {}
-
-    public void setMusic(Music music) {
-        this.music = music;
-    }
-
-    public void playMusic() {
-        System.out.println("Playing " + music.getSong());
+    public String playMusic() {
+        return "Playing " + classicalMusic.getSong();
     }
 }
