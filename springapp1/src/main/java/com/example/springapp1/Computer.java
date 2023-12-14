@@ -10,7 +10,7 @@ public class Computer {
 
     @Autowired
     public Computer(MusicPlayer musicPlayer) {
-        this.id = id;
+        this.id = 1;
         this.musicPlayer = musicPlayer;
     }
 
