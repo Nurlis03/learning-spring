@@ -2,12 +2,27 @@ package com.example.springapp1;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import ch.qos.logback.core.rolling.helper.TokenConverter;
 
 @Component
 public class MusicPlayer {
+
+    @Value("${musicPlayer.name}")
+    private String name;
+    
+    @Value("${musicPlayer.volume}")
+    private int volume;
+    
+    public String getName() {
+        return name;
+    }
+
+    public int getVolume() {
+        return volume;
+    }
 
     private Music music1;
     private Music music2;
