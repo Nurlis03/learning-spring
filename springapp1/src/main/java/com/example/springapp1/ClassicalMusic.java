@@ -1,6 +1,6 @@
 package com.example.springapp1;
 
-import org.springframework.context.annotation.Scope;
+
 import org.springframework.stereotype.Component;
 
 import jakarta.annotation.PostConstruct;
